@@ -29,5 +29,3 @@ CommonRecyclerAdapter<> adapter = new CommonRecyclerAdapter<>(context, data, lay
     }
 });
 ```
-
-#### For ListView
