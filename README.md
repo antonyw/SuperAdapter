@@ -25,7 +25,7 @@ dependencies {
 new CommonRecyclerAdapter<>(context, data, layout, new OnConvert<T>() {
     @Override
     public void convert(CommonRecyclerViewHolder viewHolder, T t) {
-        //do something for item
+        viewHolder.setText(resourceId,"xxx");
     }
 });
 ```
