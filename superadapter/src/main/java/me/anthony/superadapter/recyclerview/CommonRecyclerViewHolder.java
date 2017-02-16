@@ -153,13 +153,13 @@ public class CommonRecyclerViewHolder extends RecyclerView.ViewHolder implements
     @Override
     public void onClick(View v) {
         if (clickListener != null)
-            clickListener.onItemClick(v, getAdapterPosition());
+            clickListener.onItemClick(v, getLayoutPosition());
     }
 
     @Override
     public boolean onLongClick(View v) {
         if (longClickListener != null)
-            longClickListener.onItemLongClick(v, getAdapterPosition());
+            longClickListener.onItemLongClick(v, getLayoutPosition());
         return true;
     }
 }
