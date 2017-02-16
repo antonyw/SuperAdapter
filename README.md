@@ -16,7 +16,7 @@ allprojects {
 Add the dependency
 ```
 dependencies {
-    compile 'com.github.antonyw:superadapter:1.0'
+    compile 'com.github.antonyw:superadapter:1.1'
 }
 ```
 
