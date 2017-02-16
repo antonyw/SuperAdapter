@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import java.util.Random;
 import me.anthony.superadapter.recyclerview.CommonRecyclerAdapter;
 import me.anthony.superadapter.recyclerview.CommonRecyclerViewHolder;
 import me.anthony.superadapter.recyclerview.OnConvert;
+import me.anthony.superadapter.recyclerview.OnItemClickListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         recyclerView.setAdapter(adapter);
+        adapter.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+
+            }
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

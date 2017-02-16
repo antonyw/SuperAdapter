@@ -21,13 +21,31 @@ dependencies {
 ```
 
 ##### For RecyclerView
-```Java
-CommonRecyclerAdapter<> adapter = new CommonRecyclerAdapter<>(context, data, layout, new OnConvert<>() {
+```java
+new CommonRecyclerAdapter<>(context, data, layout, new OnConvert<T>() {
     @Override
     public void convert(CommonRecyclerViewHolder viewHolder, T t) {
-
+        //do something for item
     }
 });
 ```
 
-#### For ListView
+_Add click listener and long click listener for RecyclerView item_
+```java
+adapter.setOnItemClickListener(new OnItemClickListener() {
+    @Override
+    public void onItemClick(View view, int position) {
+        //click
+    }
+});
+```
+
+##### For ListView
+```java
+new CommonListAdapter<>(context, data, layout, new OnConvert<T>() {
+    @Override
+    public void convert(CommonListViewHolder viewHolder, T t) {
+        //do something for item
+    }
+})
+```
