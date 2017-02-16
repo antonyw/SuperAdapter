@@ -43,7 +43,7 @@ public class CommonListViewHolder {
     }
 
     //通过viewID获取控件
-    private  <T extends View> T getView(int viewId) {
+    private <T extends View> T getView(int viewId) {
 
         View view = mViews.get(viewId);
 
@@ -80,7 +80,7 @@ public class CommonListViewHolder {
      * @param isVisible
      * @return
      */
-    public CommonListViewHolder setVisible(int viewId,int isVisible){
+    public CommonListViewHolder setVisible(int viewId, int isVisible) {
         View tv = getView(viewId);
         tv.setVisibility(isVisible);
         return this;
@@ -88,6 +88,7 @@ public class CommonListViewHolder {
 
     /**
      * 设置控件内部点击事件
+     *
      * @param viewId
      * @param listener
      * @return
@@ -97,16 +98,30 @@ public class CommonListViewHolder {
         v.setOnClickListener(listener);
         return this;
     }
+
     /**
-     * 向Button填充数据
+     * 设置控件内部长按事件
      *
      * @param viewId
-     * @param visible Button是否可见
+     * @param longClickListener
      * @return
      */
-    public CommonListViewHolder setButton(int viewId, int visible) {
+    public CommonListViewHolder setHolderLongClickListener(int viewId, View.OnLongClickListener longClickListener) {
+        View v = getView(viewId);
+        v.setOnLongClickListener(longClickListener);
+        return this;
+    }
+
+    /**
+     * 设置Button文字
+     *
+     * @param viewId
+     * @param text
+     * @return
+     */
+    public CommonListViewHolder setButton(int viewId, String text) {
         Button btn = getView(viewId);
-        btn.setVisibility(visible);
+        btn.setText(text);
         return this;
     }
 
