@@ -149,6 +149,13 @@ public class CommonRecyclerViewHolder extends RecyclerView.ViewHolder implements
         return this;
     }
 
+    public int get_layoutPosition(){
+        return getLayoutPosition();
+    }
+
+    public int get_adapterPosition(){
+        return getAdapterPosition();
+    }
 
     @Override
     public void onClick(View v) {
