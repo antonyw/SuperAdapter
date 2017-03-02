@@ -1,7 +1,5 @@
 package me.anthony.superadapter.recyclerview;
 
-import me.anthony.superadapter.recyclerview.CommonRecyclerViewHolder;
-
 /**
  * Created by Anthony on 2017/2/11.
  */
